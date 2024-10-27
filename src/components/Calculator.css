@@ -1,0 +1,12 @@
+.calculator {
+  color: hsl(202, 55%, 16%);
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  align-items: start;
+}
+
+h2 {
+  margin: 0 0 5px 0;
+}
