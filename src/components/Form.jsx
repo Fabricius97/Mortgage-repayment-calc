@@ -30,13 +30,23 @@ const Form = () => {
         </div>
 
         <label htmlFor="type">Mortgage Type</label>
-        <div className="input-container">
-          <input className="type" type="checkbox" id="typeOne" />
+        <div className="radio-container">
+          <input
+            className="type"
+            type="radio"
+            id="typeOne"
+            name="mortgageType"
+          />
           <label htmlFor="typeOne">Repayment</label>
         </div>
-        <div className="input-container">
-          <input className="type" type="checkbox" id="typeOne" />
-          <label htmlFor="typeOne">Interest Only</label>
+        <div className="radio-container">
+          <input
+            className="type"
+            type="radio"
+            id="typeTwo"
+            name="mortgageType"
+          />
+          <label htmlFor="typeTwo">Interest Only</label>
         </div>
       </form>
     </div>

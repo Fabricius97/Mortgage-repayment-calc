@@ -25,7 +25,7 @@
   text-decoration: none; /* Removes default text decoration */
   display: inline;
   line-height: 17px;
-  width: 60px;
+  width: 62px;
   margin-bottom: 30px;
 }
 
@@ -36,6 +36,7 @@
   width: 100%;
   border: solid 1px hsl(200, 24%, 40%);
   border-radius: 4px; /* Rundade hörn för ett mjukare utseende */
+  font-weight: 700;
 }
 
 input {
@@ -52,38 +53,24 @@ input:focus {
 }
 
 .input-label {
-  /* Justerar avståndet mellan input och texten */
-  color: hsl(200, 24%, 40%); /* Matchar textfärgen */
-  font-size: 16px; /* Anpassa textstorlek */
+  color: hsl(200, 24%, 40%);
   background-color: hsl(202, 86%, 94%);
   padding: 10px;
-  font-weight: 700;
   flex: 1;
 }
 
-input[type="checkbox"] {
-  appearance: none; /* Tar bort standard-checkbox-stil */
-  width: 0px;
-  height: 20px;
-  border: 1px solid hsl(200, 24%, 40%);
-  border-radius: 50%; /* Gör checkboxen rund */
-  cursor: pointer;
-  position: relative;
+.radio-container {
+  display: flex;
+  align-items: center; /* Centrerar input och text vertikalt */
+  margin-bottom: 10px; /* Justera för avstånd mellan fälten */
+  width: 100%;
+  border: solid 1px hsl(200, 24%, 40%);
+  border-radius: 4px; /* Rundade hörn för ett mjukare utseende */
+  font-weight: 700;
+  color: hsl(202, 55%, 16%);
+  padding: 10px;
+  gap: 10px;
 }
 
-input[type="checkbox"]:checked {
-  background-color: hsl(200, 24%, 40%);
-  border-color: hsl(200, 24%, 40%);
-}
-
-input[type="checkbox"]:checked::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: white; /* Anpassa efter behov */
-  border-radius: 50%; /* Rund fyllning */
-}
+/* input[type="radio"] {
+} */
