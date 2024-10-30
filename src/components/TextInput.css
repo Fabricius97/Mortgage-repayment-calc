@@ -1,0 +1,36 @@
+.text-input {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  border: solid 1px hsl(200, 24%, 40%);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  color: hsl(202, 55%, 16%);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0px 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-label {
+  color: hsl(200, 24%, 40%);
+  background-color: hsl(202, 86%, 94%);
+  padding: 10px;
+  flex: 1;
+}
