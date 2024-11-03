@@ -15,6 +15,36 @@
   font-weight: 700;
 }
 
+/* Active state styles take precedence */
+.input-container.active {
+  border-color: hsl(61, 70%, 52%);
+}
+
+/* Error styles should be overridden by active state */
+.input-container.error:not(.active) {
+  border: solid 1px hsl(0, 100%, 50%); /* Change border color for error when not active */
+}
+
+/* Error styles for the input label */
+.input-label.error {
+  background-color: hsl(0, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* Default input label styles */
+.input-label {
+  color: hsl(200, 24%, 40%);
+  background-color: hsl(202, 86%, 94%);
+  padding: 10px;
+  flex: 1;
+}
+
+/* Active label styles */
+.input-label.active {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
 input {
   background-color: transparent;
   border: none;
@@ -26,11 +56,4 @@ input {
 
 input:focus {
   outline: none;
-}
-
-.input-label {
-  color: hsl(200, 24%, 40%);
-  background-color: hsl(202, 86%, 94%);
-  padding: 10px;
-  flex: 1;
 }

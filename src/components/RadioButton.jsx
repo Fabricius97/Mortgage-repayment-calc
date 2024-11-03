@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./RadioButton.css";
 
-const RadioButton = () => {
-  const [selectedType, setSelectedType] = useState(""); // Håller koll på vald radioknapp
+const RadioButton = ({ onTypeChange }) => {
+  const [selectedType, setSelectedType] = useState("");
 
   const radioOptions = [
-    { id: "typeOne", name: "mortgageType", label: "Repayment" },
-    { id: "typeTwo", name: "mortgageType", label: "Interest Only" },
+    { id: "repayment", name: "mortgageType", label: "Repayment" },
+    { id: "interestOnly", name: "mortgageType", label: "Interest Only" },
   ];
 
   const handleChange = (id) => {
-    setSelectedType(id); // Uppdatera vald typ
+    setSelectedType(id);
+    onTypeChange(id); // Skicka vald typ till parent-komponenten
   };
 
   return (
@@ -20,7 +21,7 @@ const RadioButton = () => {
         <label
           className={`radio-container ${
             selectedType === option.id ? "active" : ""
-          }`} // Lägg till klass baserat på vald typ
+          }`}
           key={option.id}
         >
           <input
@@ -28,13 +29,12 @@ const RadioButton = () => {
             id={option.id}
             name={option.name}
             value={option.id}
-            checked={selectedType === option.id} // Ställ in som vald om den är vald
-            onChange={() => handleChange(option.id)} // Hantera förändring
+            checked={selectedType === option.id}
+            onChange={() => handleChange(option.id)}
           />
           <span className="radio-label">{option.label}</span>
         </label>
       ))}
-      {/* <span className="error">This field is required</span> */}
     </div>
   );
 };

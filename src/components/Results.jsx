@@ -1,7 +1,7 @@
 import React from "react";
 import "./Results.css";
 
-const Results = ({ result }) => {
+const Results = ({ monthlyPayment, totalRepayment }) => {
   return (
     <div className="youreResultContainer">
       <div className="textContainer">
@@ -15,13 +15,12 @@ const Results = ({ result }) => {
       <div className="resultContainer">
         <div className="monthly">
           <span>Your monthly repayments</span>
-          <h1>{result !== null ? `${result} kr` : "0 kr"}</h1>{" "}
-          {/* Visa resultatet */}
+          <h1>{monthlyPayment ? `${monthlyPayment} kr` : "0 kr"}</h1>
         </div>
         <div className="separator"></div>
         <div className="total">
           <span>Total you'll repay over the term</span>
-          <h3>100.000 kr</h3>
+          <h3>{totalRepayment ? `${totalRepayment} kr` : "0 kr"}</h3>
         </div>
       </div>
     </div>
