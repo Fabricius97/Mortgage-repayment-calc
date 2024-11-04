@@ -70,7 +70,6 @@ const Calculator = () => {
 
   return (
     <div className="calculator">
-      <h2>Mortgage Calculator</h2>
       <Form
         onValuesChange={handleInputChange}
         onCalculate={handleCalculate}

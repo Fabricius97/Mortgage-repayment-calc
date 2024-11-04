@@ -1,11 +1,10 @@
 .youreResultContainer {
   display: flex;
   background-color: hsl(202, 55%, 23%);
-  color: white;
+  color: hsl(203, 41%, 72%);
   flex-direction: column;
   padding: 0 25px 25px 25px;
   gap: 20px;
-  color: hsl(203, 41%, 72%);
 }
 
 .textContainer {
@@ -41,18 +40,52 @@ h3 {
   color: white;
 }
 
-.monthly {
-  display: flex;
-  flex-direction: column;
-}
-
+.monthly,
 .total {
   display: flex;
   flex-direction: column;
 }
 
 .separator {
-  height: 2px; /* Justera höjden på linjen */
-  background-color: hsl(200, 24%, 40%); /* Sätt färgen på linjen till vit */
-  width: 100%; /* Gör linjen fullständig bredd */
+  height: 2px;
+  background-color: hsl(200, 24%, 40%);
+  width: 100%;
+}
+
+/* Styles for the placeholder content */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: hsl(202, 55%, 23%);
+  padding: 25px 0px;
+}
+
+.placeholder img {
+  width: 150px; /* Adjust image size as needed */
+  margin-bottom: 15px;
+  margin: 0;
+}
+
+.placeholder p {
+  font-size: 16px;
+  color: hsl(203, 41%, 72%);
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .results-container {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(202, 55%, 23%);
+    align-items: center;
+    display: flex;
+    border-bottom-left-radius: 80px;
+    min-height: 510px;
+  }
+  .youreResultContainer {
+    display: flex;
+    background-color: transparent;
+  }
 }

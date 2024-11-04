@@ -13,6 +13,7 @@
   border: solid 1px hsl(200, 24%, 40%);
   border-radius: 4px;
   font-weight: 700;
+  justify-content: space-between;
 }
 
 /* Active state styles take precedence */
@@ -36,7 +37,7 @@
   color: hsl(200, 24%, 40%);
   background-color: hsl(202, 86%, 94%);
   padding: 10px;
-  flex: 1;
+  width: 70px;
 }
 
 /* Active label styles */
@@ -52,8 +53,23 @@ input {
   font-weight: 700;
   font-size: 17px;
   padding: 0px 15px;
+  width: inherit;
 }
 
 input:focus {
   outline: none;
+}
+
+@media (min-width: 1024px) {
+  .text-input-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .text-input-container .text-input {
+    flex: 1;
+    max-width: 50%; /* Gör att de två fälten tillsammans tar upp maximalt 100% av bredden */
+    box-sizing: border-box; /* Säkra att padding och border räknas inom totalbredden */
+  }
 }

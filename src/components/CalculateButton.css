@@ -2,7 +2,7 @@
   display: flex;
   color: hsl(202, 55%, 16%);
   background-color: hsl(61, 70%, 52%);
-  width: 100%;
+  width: auto;
   border: none;
   align-items: center;
   justify-content: center;
@@ -11,4 +11,13 @@
   gap: 10px;
   font-weight: 700;
   font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .calculateButton {
+    padding: 0px 50px;
+    width: auto;
+  }
 }

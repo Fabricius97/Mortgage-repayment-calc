@@ -14,9 +14,12 @@ const Form = ({
 }) => {
   return (
     <div className="form-container">
-      <button className="clear-button" type="button" onClick={onClear}>
-        Clear All
-      </button>
+      <div className="mortAndButton">
+        <h2>Mortgage Calculator</h2>
+        <button className="clear-button" type="button" onClick={onClear}>
+          Clear All
+        </button>
+      </div>
       <form className="form" action="">
         <TextInput
           onValuesChange={onValuesChange}
