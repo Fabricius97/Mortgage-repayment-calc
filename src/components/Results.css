@@ -83,6 +83,7 @@ h3 {
     display: flex;
     border-bottom-left-radius: 80px;
     min-height: 510px;
+    padding: 25px;
   }
   .youreResultContainer {
     display: flex;
